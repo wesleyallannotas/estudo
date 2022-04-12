@@ -1,0 +1,55 @@
+body, ul, li, p {
+    margin: 0;
+    padding: 0;
+    list-style:none;
+    font-size:1.2rem;
+    font-family:arial;
+}
+a {
+    text-decoration:none;
+    color:white;
+}
+img {
+    display:block;
+    max-width:100%;
+}
+h1 {
+    text-align:center;
+    margin-top:100px;
+    color:#1d1e20;
+}
+.topo {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+    background-color:#1d1e20;
+    padding:20px;
+}
+.menu {
+    display:flex;
+}
+.menu li {
+    margin-left:10px;
+}
+.menu li a {
+    display:block;
+    padding:10px;
+}
+
+/* FlexBox Galeria */
+.galeria {
+    display:flex;
+    flex-wrap:wrap;
+    max-width:800px;
+    margin:0 auto;
+}
+.galeria > div {
+    flex:1 1 200px;
+    margin:10px;
+}
+.galeria > div > p {
+    text-align:center;    
+    background-color:#1d1e20;
+    color:white;
+}
