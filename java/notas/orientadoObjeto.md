@@ -281,5 +281,3 @@ Palavra reservada que significa uma auto referencia para o objeto
 - `toString` - Converte o objeto para string
 
 Quando usamos `print` em um objeto, ele automaticamente ia buscar pelo método `toString`, podemos sobrepor o `toString` padrão criando outro na nossa classe.
-
-# Exercícios de Fixação: [Slides 15 e 16](../slides/03-classes-atributos-membros-staticos.pdf)
