@@ -23,6 +23,7 @@ Fazer um programa para ler um valor numérico qualquer, e dai mostrar quanto ser
 > `final` - **Informa que e um constante.**  
 >
 > **Padrão de nome para constantes e tudo maiúsculo**  
+> Exemplo: AREA_TOTAL 
 ```java
 package application;
 
@@ -108,6 +109,56 @@ public class Program {
 ```
 
 ## Versão 3 : Classe `Calculator` com método estático.
+> Nao e necessário criar um objeto calc, pois os membros sao estáticos
+>
+> Chamamos os membros através do nome da Classe.
 ```java
+// Classe Calculator
+package util;
 
+public class Calculator {
+    public static final double PI = 3.14159;
+
+    public static double circumference(double radius) {
+        return 2.0 * PI * radius;
+    }
+    
+    public static double volume(double radius) {
+        return 4.0 * PI * radius * radius * radius / 3.0;
+    }
+}
+
+// Classe Program
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+import util.Calculator;
+
+public class Program {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner;
+
+        System.out.print("Enter radius: ");
+        double radius = sc.nextDouble();
+
+        double c = Calculator.circumference(radius);
+        double v = Calculator.volume(radius);
+
+        System.out.printf("Circumference: %.2f%n", c);
+        System.out.printf("Volume: %.2f%n", v);
+        System.out.printf("PI value: %.2f%n", Calculator.PI);
+
+        sc.close();
+    }
+}
 ```
+
+# Quando utilizar estático ou instancia
+
+Por exemplo no problema do triangulo, cada triangulo possui sua area.  
+`Area()` e uma **operação concernente** ao objeto, cada triangulo possui sua area  
+Assim fica claro que a operação de instancia, pois **cada objeto** vai ter seu **comportamento especifico**.
+
+Ja no caso da calculadora, os **valores dos cálculos nao mudam** para calculadores diferentes, ou seja, sao **cálculos estáticos** (Fixos, nao mudam), vale ressaltar que o valor de PI também e estático
