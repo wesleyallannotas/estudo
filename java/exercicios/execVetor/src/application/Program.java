@@ -1,25 +1,23 @@
 package application;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 import entities.Client;
 
 public class Program {
     public static void main(String[] args) {
-        Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
+
+        Client[] vect = new Client[10];
 
         System.out.print("How many rooms will be rented? ");
         int n = sc.nextInt();
-        Client[] vect = new Client[9];
-        int rent = 0;
         
-        for (int i=0; i<n; i++) {
-            sc.nextLine();
-            rent++;
-            System.out.println("Rent #" + rent);
+        for (int i=1; i<=n; i++) {
+            System.out.println();
+            System.out.println("Rent #" + i + ":");
             System.out.print("Name: ");
+            sc.nextLine();
             String name = sc.nextLine();
             System.out.print("Email: ");
             String email = sc.nextLine();
@@ -29,12 +27,13 @@ public class Program {
             System.out.println();
         }
         
+        System.out.println();
+        System.out.println("Busy Rooms: ");
         for (int i=0; i<vect.length; i++) {
             if (vect[i] != null) {
-                System.out.println(i + ": " + vect[i].getName() + ", " + vect[i].getEmail());
+                System.out.println(i + ": " + vect[i]);
             }
         }
-
         sc.close();
     }
 }
