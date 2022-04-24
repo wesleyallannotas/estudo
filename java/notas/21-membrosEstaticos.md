@@ -4,8 +4,8 @@ Aprendemos que uma **classe** possui membros, sendo eles, **atributos** e **mét
 
 # Membros Estáticos
 
-- Também chamados de membros de classe
-    - Em oposição a membros de instancia
+- Também chamados de membros de classe (métodos de classe)
+    - Em oposição a membros de instancia (métodos de instancia)
 - Sao membros que **fazem sentido independentemente de objetos**. **Nao precisão de objeto para serem chamados**. Sao **chamados a partir do próprio nome da classe**.
 - Aplicações comuns:
     - Classes utilitárias (Exemplo: `Math.sqrt()`, `Math` e o nome da **classe** nao de um objeto.)
@@ -157,8 +157,10 @@ public class Program {
 
 # Quando utilizar estático ou instancia
 
+## Instancia
 Por exemplo no problema do triangulo, cada triangulo possui sua area.  
 `Area()` e uma **operação concernente** ao objeto, cada triangulo possui sua area  
-Assim fica claro que a operação de instancia, pois **cada objeto** vai ter seu **comportamento especifico**.
+Assim fica claro que a **operação de instancia**, pois **cada objeto** vai ter seu **comportamento especifico**.
 
-Ja no caso da calculadora, os **valores dos cálculos nao mudam** para calculadores diferentes, ou seja, sao **cálculos estáticos** (Fixos, nao mudam), vale ressaltar que o valor de PI também e estático
+## Estático
+Ja no caso da calculadora, os **valores dos cálculos nao mudam para calculadores diferentes**, ou seja, sao **cálculos estáticos** (Fixos, nao mudam), vale ressaltar que o valor de PI também e estático, ou seja, nao necessita de nada interno do objeto, tudo vem de fora, por parâmetros, ou seja, independente da Classe, assim como foi falado acima nao sendo necessário nem instanciar um objeto, chamamos por meio do nome da Classe

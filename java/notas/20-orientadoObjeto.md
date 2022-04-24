@@ -41,13 +41,26 @@ public class Program {
 
 # Classe
 
-- E um tipo estruturado que **pode conter membros** onde esses membros podem ser **Atributos (Dados / Campos)** ou Métodos **(Funções / Operações)**
+- E um tipo estruturado que **pode conter membros** onde esses membros podem ser **Atributos (Dados / Campos)** ou **Métodos (Funções / Operações / Comportamento)**
 - A classe **também pode prover** muitos **outros recursos**, tais como:
     - Construtores
     - Sobrecarga
     - Encapsulamento
     - Herança
     - Polimorfismo
+> Classe também e um tipo de dados, porem um tipo de dados que tem mais recursos, por exemplo `String` e uma classe, com orientação a objeto criaremos nossos próprios tipos de dados.
+- Com uma classe criada, podemos criar instancias desta classe, ou seja, objetos com os dados dentro.
+    - Classe vai definir a estrutura o tipo
+    - Onde instanciando teremos **objetos** com a estrutura que definimos criando a classe
+- Quando criamos uma variável que o tipo e uma classe iremos criar uma referencia para o objeto, ou seja, sera necessário instanciar por meio do `new`
+```java
+// Declarando as variavas do tipo Funcionário
+Funcionario f1, f2;
+
+// Instanciando (Criando) os Objetos
+f1 = new Funcionario();
+f2 = new Funcionario();
+```
 
 ## Exemplos
 - Entidades: Produtos, Cliente, Triangulo
@@ -70,7 +83,7 @@ public class Triangle {
 Nossa classe `Triangle` possui apenas **Atributos**, com seu tipo sendo `double` e sao *public*, ou seja, esses atributos podem ser acessados por outro arquivo.  
 Esta dentro do *package* `entities` pois estamos considerando o triangulo uma entidade do nosso negocio.  
 
-## Mudanca na memoria
+## Mudança na memoria
 
 ![Memoria Class](./orientadoObjeto/memoriaClass.jpg)
 Antes tínhamos 3 variáveis para representar os lados de cada triangulo.  
