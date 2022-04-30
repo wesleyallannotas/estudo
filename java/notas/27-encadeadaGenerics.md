@@ -23,6 +23,11 @@
     - Dependa da implementação da lista para saber inserção e remoção
 > Normalmente e traduzido como nó ou nodo, pois vem do ingles node.
 - Lista encadeada resumido - Cada item tem um valor e um ponteiro para o proximo valor, onde apenas o ultimo nao aponta para ninguém, ou seja, seu espaço do ponteiro possui um valor `null`.
+- Para inserir um valor no meio de uma lista encadeada, basta trocar o ponteiro do item anterior para apontar para o valor adicionado, e o valor adicionado apontar para o proximo (onde o anterior dele apontava antes), ou seja, inserimos um elementos sem a necessidade de mudar toda a estrutura a frente
+    - No *Array* (vetor) isso nao acontece, seria necessário empurrar todos os valores que ficaram na frente mais para frente.
+- Os items serão adicionados no inicio da lista, por padrão começa no ultimo ponteiro, ou seja, com valor `null`, assim vamos adicionando valor e empurrando este `Node` inicial para o final. 
+- Sempre que adicionar um novo valor, criaremos um novo `Node` e ele **apontara para antiga cabeça da lista**
+- A cabeça `head` sera o nova valor que inserir
 
 ## Exemplo de uso
 
@@ -35,10 +40,13 @@ Fazer um programa que atenda ao menu:
 package app;
 import java.util.Scanner;
 import java.util.Locale;
+import util.List;
 public class Program {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
+        // Instanciação List
+        List list = new List();
         // Menu
         int op;
         do {
@@ -46,11 +54,13 @@ public class Program {
             op = sc.nextInt();
             switch (op) {
                 case 1: {
-
+                    System.out.print("Digite um numero: ");
+                    double value = sc.nextDouble();
+                    list.add(value);
                     break;
                 }
                 case 2: {
-
+                    System.out.println(list.toString());
                     break;
                 }
                 case 3: {
@@ -68,11 +78,58 @@ public class Program {
     }
     public static void showMenu() {
         System.out.println("1 - Inserir elemento da lista");
-        System.out.println("2 - Mostar lista");
+        System.out.println("2 - Mostra lista");
         System.out.println("3 - Sair");
     }
 }
+// Casse Node
+package util;
+public class Node {
+    // Atributos
+    private Double value;
+    private Node next;      // Definição recursiva, ponteiro
+    // Getters e Setters
+    public Double getValue() {
+        return value;
+    }
+    public void setValue(Double value) {
+        this.value = value;
+    }
+    public Node getNext() {
+        return next;
+    }
+    public void setNext(Node next) {
+        this.next = next;
+    }
+}
+// Classe List
+package util;
+public class List {
+    // Atributos
+    private Node head;
+    // Métodos
+    public void add(Double value) {     // Inserindo sempre no inicio.
+        Node node = new Node();
+        node.setValue(value);
+        node.setNext(head);
+        head = node;      
+    }
+    @Override
+    public String toString() {
+        StringBuffer sb = new StringBuffer();
+        sb.append("[ ");
+        Node p = head;
+        while(p != null) {
+            sb.append(p.getValue() + " ");
+            p = p.getNext();
+        }       
+        sb.append("]");
+        return sb.toString();
+    }
+}
 ```
+
+- Override pois toda classe estende da classe object, e a classe object ja tem uma método `toString` definido, como estamos sobrescrevendo o `toString` em uma subclasse do object, colocamos o `@Override` para indicar isto, **uma boa pratica** e evita erros.
 
 ---
 
