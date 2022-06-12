@@ -1,0 +1,5 @@
+fullName = str(input('\033[33mDigite seu nome completo: ')).strip()
+print('\033[1;34mMuito prazer em te conhecer!')
+listName = fullName.split()
+print(f'\033[mSeu primeiro nome e \033[1;36m{listName[0]}\033[m')
+print(f'Seu ultimo nome e \033[1;36m{listName[len(listName)-1]}\033[m')

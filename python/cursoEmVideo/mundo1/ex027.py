@@ -1,5 +1,0 @@
-fullName = str(input('Digite seu nome completo: ')).strip()
-print('Muito prazer em te conhecer!')
-listName = fullName.split()
-print(f'Seu primeiro nome e {listName[0]}')
-print(f'Seu ultimo nome e {listName[len(listName)-1]}')
