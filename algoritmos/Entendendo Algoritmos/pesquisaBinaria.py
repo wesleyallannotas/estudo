@@ -15,6 +15,7 @@ def pesquisa_binaria(lista, item):
 
 
 numeros = [0, 3, 5, 7, 9, 11, 14, 16, 17, 19]
+print(f'Os numeros da lista sao {numeros}')
 numPes = int(input('Numero a se pesquisado: '))
 
 if pesquisa_binaria(numeros, numPes) == None:
