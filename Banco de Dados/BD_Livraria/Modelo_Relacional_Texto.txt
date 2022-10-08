@@ -1,0 +1,17 @@
+cliente(*codigo, nome, cep, cidade, bairro, rua, numero)
+
+telefone_cliente(*cliente_codigo, *telefone)
+
+cliente_fisica(*cpf, *cliente_codigo)
+
+cliente_juridico(*cnpj, *cliente_codigo)
+
+compra(*livro_isbn, *cliente_codigo, data_compra)
+
+livro(*isbn, assunto, quatidade, editora_codigo)
+
+autor(*livro_isbn, *nome)
+
+editora(*codigo, nome_gerente, cep, cidade, bairro, rua, numero)
+
+telefo_editora(*editora_codigo, *telefone)
