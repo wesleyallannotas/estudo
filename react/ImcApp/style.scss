@@ -1,0 +1,68 @@
+@mixin flexCenter($height) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $height;
+}
+
+$bg: #202121;
+$bgApp: #292a2b;
+$font: monospace;
+$text1: #8257e6;
+$text2: tomato;
+$nice: #04d361;
+$alert: #ffdc5d;
+$danger: #d61839;
+
+body {
+  @include flexCenter(100vh);
+  margin: 0;
+  padding: 0;
+  font-family: $font;
+  font-weight: bold;
+  background-color: $bg;
+  font-family: monospace;
+}
+
+#root {
+  background-color: $bgApp;
+  border-radius: 7px;
+}
+
+.container {
+  @include flexCenter(auto);
+  div {
+    margin: 20px;
+  }
+  hr {
+    border-color: $bg;
+    width: 1;
+    height: 200px;
+  }
+  input {
+    margin: 10px 0;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    background-color: $bg;
+    border: none;
+    outline: none;
+  }
+  .exibi {
+    color: white;
+    text-align: center;
+  }
+  .entrada {
+    color: $text2;
+  }
+}
+
+@media (max-width: 440px) {
+  .container {
+    flex-direction: column;
+  }
+  hr {
+    height: 1px !important;
+    width: 200px;
+  }
+}

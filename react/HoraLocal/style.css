@@ -1,0 +1,17 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  font-family: monospace;
+}
+h1 {
+  padding: 25px;
+  border-radius: 5px;
+  background-color: #111;
+  color: white;
+  font-family: inherit;
+}
