@@ -1,0 +1,14 @@
+{
+  "name": "testes-axios",
+  "version": "1.0.0",
+  "description": "Testes com a lib axios",
+  "main": "promise-all.js",
+  "scripts": {
+    "start": "echo 'Se é burro esse rep tem varios, executa um quadrado'"
+  },
+  "author": "Wesley Silva",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.2.2"
+  }
+}
