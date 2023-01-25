@@ -1,0 +1,58 @@
+@keyframes Arrow {
+  from {
+    left: 0;
+  }
+  to {
+    left: 20px;
+  }
+}
+
+@keyframes Arrow2 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 30px;
+  }
+
+  100% {
+    left: 35px;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #212021;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  background-color: #333333;
+  border-radius: 20px;
+}
+
+.arrow {
+  font-size: 50px;
+  font-weight: bold;
+  color: #222;
+  position: absolute;
+  /* animation-name: Arrow; */
+  animation-name: Arrow2;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}

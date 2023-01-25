@@ -1,0 +1,17 @@
+console.log("--- Operadores Aritméticos ---");
+console.log("2 + 5 = ", 2 + 5);
+console.log("2 - 5 = ", 2 - 5);
+console.log("2 * 5 = ", 2 * 5);
+console.log("2 / 5 = ", 2 / 5);
+console.log("2 ** 5 = ", 2 ** 5);
+console.log("2 % 5 = ", 2 % 5);
+console.log('------------------------------');
+console.log("--- Operadores Condicionais ---");
+console.log("2 > 2 = ", 2 > 2);
+console.log("2 < 2 = ", 2 < 2);
+console.log("2 >= 2 = ", 2 >= 2);
+console.log("2 <= 2 = ", 2 <= 2);
+console.log("2 == '2' = ", 2 == '2');
+console.log("2 ==== '2' = ", 2 === '2');
+console.log("2 != '2' = ", 2 != '2');
+console.log("2 !== '2' = ", 2 !== '2');
