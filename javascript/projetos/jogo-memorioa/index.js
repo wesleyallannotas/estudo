@@ -1,9 +1,11 @@
 function onLoad() {
   const dependecias = {
-    tela: Tela
-  }
+    tela: Tela,
+    util: Util
+  };
+
   const jogodaMemoria = new JogoDaMemoria(dependecias);
   jogodaMemoria.inicializar();
-};
+}
 
 window.onload = onLoad;
