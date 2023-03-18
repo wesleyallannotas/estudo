@@ -61,3 +61,20 @@ const personReadonly: Readonly<Person> = {
   age: 32,
   isAdmin: false,
 };
+
+// Mapped Types Generics
+
+interface Person {
+  id: number;
+  name: string;
+  age: number;
+  isAdmin: boolean;
+}
+
+type PartPersonId<T> = {
+  [P in keyof T]?: T[P];
+} & { id: number };
+
+const wesley: PartPersonId<Person> = {
+  id: 473,
+};
