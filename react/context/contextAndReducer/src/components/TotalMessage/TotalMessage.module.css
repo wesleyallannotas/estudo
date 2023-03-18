@@ -1,0 +1,78 @@
+.container {
+  border: 1px solid #363447;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  color: #ffffff;
+}
+
+.money {
+  color: #81fbb8;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.discount {
+  color: #fca311;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.inputUsername {
+  border: 1px solid #4a4556;
+  outline: none;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  background-color: #363447;
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.inputUsername:focus,
+.inputUsername:hover {
+  border: 1px solid #81fbb8;
+}
+
+input::placeholder {
+  text-align: center;
+}
+
+.inputId {
+  margin-top: 1rem;
+  width: 6rem;
+  border: 1px solid #4a4556;
+  outline: none;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  background-color: #363447;
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.inputId:focus,
+.inputId:hover {
+  border: 1px solid #81fbb8;
+}
+
+.button {
+  width: 4rem;
+  border: 1px solid #4a4556;
+  outline: none;
+  border-radius: 0.8rem;
+  padding: 0.5rem 1rem;
+  background-color: #363447;
+  color: #ffffff;
+  font-size: 2.4rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  border: 1px solid #81fbb8;
+}
+
+.marginLeft {
+  margin-left: 1rem;
+}

@@ -1,0 +1,95 @@
+.container {
+  position: relative;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #363447;
+  box-shadow: 3px 4px 26px rgba(0, 0, 0, 0.25);
+  --text: #fff;
+  --logo: #CE9FFC;
+  --error: #EA5455;
+}
+
+.group {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: 1fr 2fr;
+}
+
+.label {
+  color: var(--text);
+  font-size: 1.6rem;
+  text-align: right;
+  font-weight: 500;
+  align-self: center;
+}
+
+.input {
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--text);
+  background-color: #2b2a3a;
+  transition: all 0.1s ease-in-out;
+}
+
+.input::-ms-reveal {
+  color: var(--text);
+}
+
+.input:hover,
+.input:focus,
+.button:hover,
+.button:focus {
+  box-shadow: 0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.4);
+  transform: translate(-0.3rem, -0.3rem);
+  transition: all 0.1s ease-in-out;
+}
+
+.button:active {
+  box-shadow: none;
+  transform: translate(0, 0);
+}
+
+.legend {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -115%);
+  color: var(--text);
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.legend::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  height: 0.5rem;
+  background-color: var(--logo);
+}
+
+.button {
+  margin: 1.6rem 0 0;
+  padding: 0.8rem 3rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--text);
+  background-color: #2b2a3a;
+  cursor: pointer;
+}
+
+.error {
+  outline: 0.15rem solid var(--error);
+}
