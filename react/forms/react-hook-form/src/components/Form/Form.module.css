@@ -90,6 +90,6 @@
   cursor: pointer;
 }
 
-.invalid {
-  outline: 0.15rem solid var(--error);
+.error::before {
+  color: var(--error);
 }

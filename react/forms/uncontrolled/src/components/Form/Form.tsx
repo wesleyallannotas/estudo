@@ -4,9 +4,6 @@ const formValidation = (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
   const form = event.currentTarget;
   const Inputs = [form.username, form.password];
-  // const formData = new FormData(form);
-  // const username = formData.get("username");
-  // const password = formData.get("password");
 
   Inputs.forEach( input => {
     if (input.value !== "") {
